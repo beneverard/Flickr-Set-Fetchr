@@ -114,8 +114,6 @@ function get_flickr_set($set_id) {
 			}
 
 		} else {
-		
-		echo "reading from file";
 						
 			// get contents of json cache
 			$json = file_get_contents($cache_file);
@@ -135,6 +133,7 @@ function get_flickr_set($set_id) {
 
 }
 
+// pass through the set ID (as a string), ensure your flickr username and api key are set within the function
 echo '<pre>' . print_r(get_flickr_set(), TRUE) . '</pre>';
 
 // end of flickr.php
